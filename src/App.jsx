@@ -20,7 +20,6 @@ import OverdueAlerts from "./Components/OverdueAlerts";
 import AdminRegister from "./Components/AdminRegister";
 import OverdueBooksForm from "./Components/OverdueBooksForm";
 
-
 const App = () => {
   const [user, setUser] = useState(null);
 
@@ -43,8 +42,8 @@ const App = () => {
           element={user ? <Navigate to="/library-updates" /> : <Login />}
         />
         <Route path="/register" element={<RegistrationForm />} />
-        
-        <Route path="/admin-register" element={<AdminRegister />}/>
+
+        <Route path="/admin-register" element={<AdminRegister />} />
 
         {/* Protected Routes */}
         <Route
@@ -63,7 +62,7 @@ const App = () => {
           path="/study-room"
           element={user ? <StudyRoomReservation /> : <Navigate to="/" />}
         />
-        <Route path="/overdue-books" element={<OverdueBooksForm/>}/>
+        <Route path="/overdue-books" element={<OverdueBooksForm />} />
 
         {/* Only Admin Access */}
         <Route
